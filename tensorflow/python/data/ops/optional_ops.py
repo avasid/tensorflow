@@ -146,7 +146,6 @@ class _OptionalImpl(Optional):
   def value_structure(self):
     return self._value_structure
 
-
 @tf_export("data.experimental.OptionalStructure")
 class OptionalStructure(structure.Structure):
   """Represents an optional potentially containing a structured value."""
@@ -205,7 +204,6 @@ class OptionalStructure(structure.Structure):
   def _unbatch(self):
     raise NotImplementedError(
         "Unbatching for `tf.data.experimental.Optional` objects.")
-
 
 # pylint: disable=protected-access
 structure.Structure._register_custom_converter(Optional,
